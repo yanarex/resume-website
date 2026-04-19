@@ -287,13 +287,31 @@ ul {
 
 #about .about-card {
   grid-area: card;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-self: center;
 }
 
 #about .about-image {
+  grid-area: image;
+}
+
+.research-grid {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-areas:
+    "heading card"
+    "image card";
+  align-items: start;
+}
+
+#research .section-heading {
+  grid-area: heading;
+}
+
+#research .feature-card {
+  grid-area: card;
+  align-self: center;
+}
+
+#research .research-image {
   grid-area: image;
 }
 
@@ -513,7 +531,8 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .about-grid {
+  .about-grid,
+  .research-grid {
     grid-template-areas:
       "heading"
       "card"
