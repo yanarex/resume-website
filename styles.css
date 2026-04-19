@@ -250,6 +250,10 @@ ul {
   font-size: 0.88rem;
 }
 
+.photo-note:empty {
+  display: none;
+}
+
 .section-heading h2,
 .contact-card h2 {
   margin: 0;
@@ -267,6 +271,30 @@ ul {
 .research-grid,
 .education-grid {
   grid-template-columns: 1fr 1fr;
+}
+
+.about-grid {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-areas:
+    "heading card"
+    "image card";
+  align-items: start;
+}
+
+#about .section-heading {
+  grid-area: heading;
+}
+
+#about .about-card {
+  grid-area: card;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about .about-image {
+  grid-area: image;
 }
 
 .about-card,
@@ -483,6 +511,13 @@ ul {
   .skill-grid,
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-areas:
+      "heading"
+      "card"
+      "image";
   }
 
   .hero-grid {
