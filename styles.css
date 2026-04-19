@@ -426,13 +426,68 @@ ul {
     max-width: 100%;
   }
 
-  .hero-visual {
+  .hero-copy {
     order: -1;
+  }
+
+  .hero-visual {
+    order: 0;
   }
 
   .hero-photo {
     max-width: 540px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-wrap {
+    min-height: 70px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.35rem, 12vw, 3.4rem);
+    line-height: 1.02;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .photo-note {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .about-card,
+  .feature-card,
+  .contact-card,
+  .info-card,
+  .skill-card,
+  .timeline-card {
+    padding: 1.35rem;
+  }
+
+  .hero-badges span,
+  .tag-list span,
+  .contact-links a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-links {
+    width: 100%;
   }
 }
 
